@@ -12,6 +12,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.gamesretrofit.navigation.NavManager
 import com.example.gamesretrofit.ui.theme.GamesRetrofitTheme
 import com.example.gamesretrofit.viewModel.GamesViewModel
 import com.example.gamesretrofit.views.HomeView
@@ -26,7 +27,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             GamesRetrofitTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                   HomeView(viewModel)
+                   NavManager(viewModel)
                 }
             }
         }
